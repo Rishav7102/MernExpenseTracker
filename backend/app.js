@@ -15,7 +15,7 @@ mongoose
 
 //! Cors config
 const corsOptions = {
-  origin: "*"
+  origin: ["http://localhost:5173"],
 };
 app.use(cors(corsOptions));
 //!Middlewares
