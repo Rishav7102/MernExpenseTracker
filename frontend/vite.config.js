@@ -3,10 +3,10 @@ import react from '@vitejs/plugin-react'
 
 // https://vitejs.dev/config/
 export default defineConfig({
-  app: {
-    proxy: {
-      '/api': 'https://mernexpensetracker.onrender.com',
-    },
-  },
+  // app: {
+  //   proxy: {
+  //     '/api': 'https://mernexpensetracker.onrender.com',
+  //   },
+  // },
   plugins: [react()],
 })
