@@ -15,7 +15,8 @@ mongoose
 
 //! Cors config
 const corsOptions = {
-  origin: ["http://localhost:5173"],
+  // origin: ["http://localhost:5173"],
+  origin: ["https://main--rococo-valkyrie-34ee8f.netlify.app"],
 };
 app.use(cors(corsOptions));
 
