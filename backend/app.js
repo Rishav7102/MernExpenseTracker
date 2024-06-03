@@ -15,15 +15,10 @@ mongoose
 
 //! Cors config
 const corsOptions = {
-  // origin: ["http://localhost:5173"],
-  "origin": "*",
-  "methods": "GET,HEAD,PUT,PATCH,POST,DELETE",
-  "preflightContinue": false,
-  "optionsSuccessStatus": 204
+  origin: ["http://localhost:5173"],
 };
 app.use(cors(corsOptions));
 
-// app.options('*', cors());
 
 //!Middlewares
 app.use(express.json()); //?Pass incoming json data
