@@ -15,8 +15,10 @@ mongoose
 
 //! Cors config
 const corsOptions = {
-  // origin: ["http://localhost:5173"],
-  origin: "*",
+  origin: ["http://localhost:5173"],
+  // origin: "*",
+  credentials:true,            
+    optionSuccessStatus:200,
 };
 app.use(cors(corsOptions));
 
