@@ -14,10 +14,12 @@ mongoose
   .catch((e) => console.log(e));
 
 //! Cors config
-const corsOptions = {
-  origin: ["http://localhost:5173"],
-};
-app.use(cors(corsOptions));
+// const corsOptions = {
+//   origin: ["http://localhost:5173"],
+// };
+// app.use(cors(corsOptions));
+
+app.options('*', cors());
 
 //!Middlewares
 app.use(express.json()); //?Pass incoming json data
