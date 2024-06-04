@@ -44,7 +44,7 @@ const CategoriesList = () => {
       {/* Display message */}
       {isLoading && <AlertMessage type="loading" message="Loading" />}
       {isError && (
-        <AlertMessage type="error" message={error.response.data.message} />
+        <AlertMessage type="error" message={error?.response?.data?.message} />
       )}
       <ul className="space-y-4">
         {data?.map((category) => (
