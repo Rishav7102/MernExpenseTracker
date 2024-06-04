@@ -5,6 +5,7 @@ const userRouter = require("./routes/userRouter");
 const errorHandler = require("./middlewares/errorHandlerMiddleware");
 const categoryRouter = require("./routes/categoryRouter");
 const transactionRouter = require("./routes/transactionRouter");
+const path = require("path");
 const app = express();
 
 //!Connect to mongodb
@@ -20,6 +21,7 @@ const corsOptions = {
 
 };
 app.use(cors(corsOptions));
+app.use(express.static(path.join(__dirname, './frontend/dist')));
 
 
 //!Middlewares
