@@ -3,7 +3,7 @@ const usersController = require("../controllers/usersCtrl");
 const isAuthenticated = require("../middlewares/isAuth");
 const userRouter = express.Router();
 
-router.get("/", (req, res) => {
+userRouter.get("/", (req, res) => {
 res.setHeader("Access-Control-Allow-Origin", "*")
 res.setHeader("Access-Control-Allow-Credentials", "true");
 res.setHeader("Access-Control-Max-Age", "1800");
