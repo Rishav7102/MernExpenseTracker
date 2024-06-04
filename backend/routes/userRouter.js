@@ -3,14 +3,6 @@ const usersController = require("../controllers/usersCtrl");
 const isAuthenticated = require("../middlewares/isAuth");
 const userRouter = express.Router();
 
-userRouter.get("/", (req, res) => {
-res.setHeader("Access-Control-Allow-Origin", "*")
-res.setHeader("Access-Control-Allow-Credentials", "true");
-res.setHeader("Access-Control-Max-Age", "1800");
-res.setHeader("Access-Control-Allow-Headers", "content-type");
-res.setHeader( "Access-Control-Allow-Methods", "PUT, POST, GET, DELETE, PATCH, OPTIONS" ); 
- });
-
 //!Register
 userRouter.post("/api/v1/users/register", usersController.register);
 //! Login
