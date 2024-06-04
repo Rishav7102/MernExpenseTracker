@@ -16,6 +16,8 @@ mongoose
 //! Cors config
 const corsOptions = {
   origin: ["https://rococo-valkyrie-34ee8f.netlify.app/"],
+  methods: ["POST", "GET"],
+  credentials: true
 };
 app.use(cors(corsOptions));
 
