@@ -5,7 +5,7 @@ const userRouter = require("./routes/userRouter");
 const errorHandler = require("./middlewares/errorHandlerMiddleware");
 const categoryRouter = require("./routes/categoryRouter");
 const transactionRouter = require("./routes/transactionRouter");
-const path = require("path");
+// const path = require("path");
 const app = express();
 
 //!Connect to mongodb
@@ -16,12 +16,12 @@ mongoose
 
 //! Cors config
 const corsOptions = {
-  // origin: ["https://rococo-valkyrie-34ee8f.netlify.app/"],
-  Access-Control-Allow-Origin: *
+  origin: ["*"],
+  // Access-Control-Allow-Origin: *
 
 };
 app.use(cors(corsOptions));
-app.use(express.static(path.join(__dirname, './frontend/dist')));
+// app.use(express.static(path.join(__dirname, './frontend/dist')));
 
 
 //!Middlewares
